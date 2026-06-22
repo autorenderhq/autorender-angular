@@ -1,0 +1,85 @@
+{
+  "name": "@autorender/angular",
+  "version": "0.3.2",
+  "description": "Autorender SDK for Angular — file upload widget and ARImage / ViewTag image transformations.",
+  "type": "module",
+  "module": "./dist/fesm2022/autorender-angular.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/fesm2022/autorender-angular.mjs",
+      "import": "./dist/fesm2022/autorender-angular.mjs",
+      "default": "./dist/fesm2022/autorender-angular.mjs"
+    },
+    "./viewtag": {
+      "types": "./dist/viewtag/index.d.ts",
+      "browser": "./dist/fesm2022/autorender-angular-viewtag.mjs",
+      "import": "./dist/fesm2022/autorender-angular-viewtag.mjs",
+      "default": "./dist/fesm2022/autorender-angular-viewtag.mjs"
+    },
+    "./styles": {
+      "default": "./dist/styles.css"
+    },
+    "./dist/styles.css": {
+      "default": "./dist/styles.css"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json && node ./scripts/postbuild-copy-styles.cjs",
+    "watch": "ng-packagr -p ng-package.json --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "autorender sdk",
+    "autorender",
+    "sdk",
+    "viewtag",
+    "image",
+    "upload",
+    "angular"
+  ],
+  "author": "Autorender",
+  "license": "MIT",
+  "sideEffects": [
+    "*.css",
+    "dist/*.css"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@autorender/js": "^0.3.3"
+  },
+  "peerDependencies": {
+    "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
+    "video.js": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "video.js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@types/node": "^20.11.24",
+    "ng-packagr": "^17.3.0",
+    "typescript": "~5.4.0",
+    "video.js": "^8.23.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autorenderhq/autorender-angular.git"
+  },
+  "homepage": "https://github.com/autorenderhq/autorender-angular#readme",
+  "bugs": {
+    "url": "https://github.com/autorenderhq/autorender-angular/issues"
+  }
+}
