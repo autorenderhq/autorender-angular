@@ -52,10 +52,10 @@
     "dist/*.css"
   ],
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
-    "@autorender/js": "^0.3.3"
+    "@autorender/js": "^0.3.5"
   },
   "peerDependencies": {
     "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",

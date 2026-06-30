@@ -143,6 +143,57 @@ export class ProductVideoComponent {}
 
 Supports MP4, HLS (`.m3u8`), and DASH (`.mpd`) sources.
 
+### Common video transformations
+
+Some transforms produce an image (thumbnail, GIF) — use `<ar-image>` for those instead of `<ar-video>`.
+
+```typescript
+@Component({
+  selector: 'app-video-examples',
+  standalone: true,
+  imports: [ARImageComponent, ARVideoComponent],
+  template: `
+    <!-- Thumbnail frame — use ar-image, not ar-video -->
+    <ar-image
+      src="docs/skateboarding.mp4"
+      [width]="320"
+      [height]="220"
+      alt="Thumbnail"
+      [transform]="{ thumb_ar: true }"
+    />
+
+    <!-- Animated GIF — use ar-image -->
+    <ar-image
+      src="docs/skateboarding.mp4"
+      [width]="320"
+      [height]="220"
+      alt="GIF preview"
+      [transform]="{ f: 'gif' }"
+    />
+
+    <!-- Trim a clip (2s – 8s) -->
+    <ar-video
+      src="docs/skateboarding.mp4"
+      [width]="720"
+      [height]="405"
+      [controls]="true"
+      [transform]="{ so: 2, eo: 8 }"
+    />
+
+    <!-- Pad to 16:9 with white background -->
+    <ar-video
+      src="docs/skateboarding.mp4"
+      [width]="720"
+      [height]="405"
+      [controls]="true"
+      [transform]="{ ar: '16:9', cm_pad_resize: true, bg: 'white' }"
+    />
+  `
+})
+export class VideoExamplesComponent {}
+```
+
+
 ### Use Service Directly
 
 ```typescript
@@ -233,4 +284,4 @@ Angular component that wraps `<img>` with AutoRender transformations.
 
 ## Documentation
 
-See the [full documentation](https://autorender.mintlify.app) for complete API reference.
+See the [full documentation](https://autorender.io/docs) for complete API reference.
