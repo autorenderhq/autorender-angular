@@ -1,7 +1,7 @@
 # Autorender Angular SDK
 
 [![npm version](https://img.shields.io/npm/v/@autorender/angular)](https://www.npmjs.com/package/@autorender/angular)
-[![CI](https://github.com/autorenderhq/autorender-angular/workflows/CI/badge.svg)](https://github.com/autorenderhq/autorender-angular/actions)
+[![CI](https://github.com/autorender/autorender-angular/workflows/CI/badge.svg)](https://github.com/autorender/autorender-angular/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Follow on X](https://img.shields.io/twitter/follow/AutoRenderHQ?label=Follow&style=social)](https://x.com/AutoRenderHQ)
 

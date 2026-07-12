@@ -76,10 +76,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autorenderhq/autorender-angular.git"
+    "url": "git+https://github.com/autorender/autorender-angular.git"
   },
-  "homepage": "https://github.com/autorenderhq/autorender-angular#readme",
+  "homepage": "https://github.com/autorender/autorender-angular#readme",
   "bugs": {
-    "url": "https://github.com/autorenderhq/autorender-angular/issues"
+    "url": "https://github.com/autorender/autorender-angular/issues"
   }
 }
