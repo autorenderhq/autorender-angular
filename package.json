@@ -1,6 +1,6 @@
 {
   "name": "@autorender/angular",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Autorender SDK for Angular — file upload widget and ARImage / ViewTag image transformations.",
   "type": "module",
   "module": "./dist/fesm2022/autorender-angular.mjs",
@@ -18,6 +18,12 @@
       "import": "./dist/fesm2022/autorender-angular-viewtag.mjs",
       "default": "./dist/fesm2022/autorender-angular-viewtag.mjs"
     },
+    "./viewtag/video": {
+      "types": "./dist/viewtag/video/index.d.ts",
+      "browser": "./dist/fesm2022/autorender-angular-viewtag-video.mjs",
+      "import": "./dist/fesm2022/autorender-angular-viewtag-video.mjs",
+      "default": "./dist/fesm2022/autorender-angular-viewtag-video.mjs"
+    },
     "./styles": {
       "default": "./dist/styles.css"
     },
@@ -32,7 +38,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "ng-packagr -p ng-package.json && node ./scripts/postbuild-copy-styles.cjs",
+    "build": "ng-packagr -p ng-package.json && node ./scripts/postbuild-copy-styles.cjs && node ./scripts/postbuild-fix-exports.cjs",
     "watch": "ng-packagr -p ng-package.json --watch",
     "typecheck": "tsc --noEmit"
   },
@@ -55,7 +61,7 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@autorender/js": "^0.3.5"
+    "@autorender/js": "^0.4.0"
   },
   "peerDependencies": {
     "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",

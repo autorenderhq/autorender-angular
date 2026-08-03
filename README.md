@@ -121,7 +121,9 @@ npm install video.js
 
 ```typescript
 import { Component } from '@angular/core';
-import { ARVideoComponent } from '@autorender/angular';
+// `ARVideoComponent` has its own entry point so image-only apps never pull
+// `video.js` into their bundle.
+import { ARVideoComponent } from '@autorender/angular/viewtag/video';
 
 @Component({
   selector: 'app-product-video',
@@ -264,7 +266,7 @@ Injection token for AR configuration.
 - `defaults?: { f?: string, q?: string | number }` - Default transformations
 - `deviceBreakpoints?: number[]` - Device breakpoints
 - `imageBreakpoints?: number[]` - Image breakpoints
-- `enableDPR?: boolean` - Enable device pixel ratio (default: `true`)
+- `enableDPR?: boolean` - Emit a `2x` candidate in responsive srcsets (default: `true`). Does not affect `url()`.
 - `enableResponsive?: boolean` - Enable responsive images (default: `true`)
 
 #### `<ar-image />` (ARImageComponent)

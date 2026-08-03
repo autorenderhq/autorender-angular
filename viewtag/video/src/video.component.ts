@@ -15,7 +15,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { AutoRenderService } from './service';
+import { AutoRenderService } from '@autorender/angular/viewtag';
 import { loadVideoJs } from '@autorender/js/viewtag/load-videojs';
 import type { TransformOptions } from '@autorender/js/viewtag';
 
