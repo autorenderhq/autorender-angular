@@ -1,6 +1,6 @@
 {
   "name": "@autorender/angular",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "Autorender SDK for Angular — file upload widget and ARImage / ViewTag image transformations.",
   "type": "module",
   "module": "./dist/fesm2022/autorender-angular.mjs",
@@ -61,7 +61,7 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@autorender/js": "^0.4.0"
+    "@autorender/js": "^0.5.0"
   },
   "peerDependencies": {
     "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
